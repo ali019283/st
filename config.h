@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "MononokiNerdFontMono-Regular:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 15;
 static char *font2[] = {
 "Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true"
@@ -88,30 +88,22 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* Gruvbox Theme */
-"#1e1e1e",
-"#b76666",
-"#8d987e",
-"#c6aa82",
-"#717e88",
-"#958793",
-"#8aa6a5",
-"#d3d3c4",
-"#403e3e",
-"#b66467",
-"#8d987e",
-"#dcbb8c",
-"#6f8392",
-"#958793",
-"#8aa6a5",
-"#d3d3c4",
-
-[255] = 0,
-
-/* more colors can be added after 255 to use with DefaultXX */
-//"#b5b1a4",
-"#1e1e1e",
-"#ebdbb2"
+	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	[1] = "#cc241d", /* red     */
+	[2] = "#98971a", /* green   */
+	[3] = "#d79921", /* yellow  */
+	[4] = "#458588", /* blue    */
+	[5] = "#b16286", /* magenta */
+	[6] = "#689d6a", /* cyan    */
+	[7] = "#a89984", /* white   */
+	[8]  = "#928374", /* black   */
+	[9]  = "#fb4934", /* red     */
+	[10] = "#b8bb26", /* green   */
+	[11] = "#fabd2f", /* yellow  */
+	[12] = "#83a598", /* blue    */
+	[13] = "#d3869b", /* magenta */
+	[14] = "#8ec07c", /* cyan    */
+	[15] = "#ebdbb2", /* white   */
 };
 
 
@@ -119,9 +111,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 256;
 
 /*
